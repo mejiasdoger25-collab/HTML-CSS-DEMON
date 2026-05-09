@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 85%;
+            margin: 0%;
+            background-color: ivory;
+        }
+
+        header h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding-left: 0%;
+            /*para que no se desplace hacia la izq*/
+
+            display: flex;
+            /*para ponerlo horizontal*/
+            /*cuando pones las cajas flexibles, el ancho de las cajas es el ancho de lo que tiene dentro*/
+            justify-content: space-around;
+            /*para el espacio*/
+
+        }
+
+        nav ul li {
+            /*cuando pones las cajas flexibles, el ancho de las cajas es el ancho de lo que tiene dentro*/
+            background-color: red;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            flex: 1 1 20%;
+            /*para estirar*/
+            /*si sobra que se repartan igual, si se pasa, que se enconjan por igual, para repartir dimensiones*/
+
+            text-align: center;
+            /*para alinear*/
+            /*margin-left: 1px; margin o border para alineacion, con border se puede conseguir mas ez*/
+            border-left: solid ivory 1px;
+        }
+
+        nav ul li a {
+            /*para cambiar la apariencia a los enlaces del menu*/
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li:hover {
+            /*para que se ponga de otro color al pasar por encima el ratón*/
+            background-color: pink;
+            color: red;
+        }
+
+        nav ul li:hover a {
+            /*los enlaces que estén dentro de un li hover se van a poner rojos*/
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#"><li>primero</li></a>            /*poner los enlaces dentro del li para que funcione, hacerlo al revés pero las cajas no son enlaces, solo el texto*/
+                <a href="#"><li>segundo</li></a>
+                <a href="#"><li>terero</li></a>
+                <a href="#"><li>primero</li></a>
+                <a href="#"><li>primero</li></a>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

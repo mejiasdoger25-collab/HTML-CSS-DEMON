@@ -1,0 +1,55 @@
+#titulos {
+    background-color: rgb(255, 164, 131);
+}
+
+#titulo1 {
+    text-align: left;
+    padding-left: 16em;
+}
+
+#titulo2 {
+    text-align: center;
+}
+
+#titulo3 {
+    text-align: right;
+    padding-right: 12em;
+}
+
+.rimas1 {
+    font-style: oblique;
+    background-color:rgb(255, 225, 185);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 16em;
+    text-align: left;
+}
+
+.rimas2 {
+    background-color:rgb(182, 255, 231) ;
+    padding: 4em;
+    text-align: center;
+}
+
+.rimas3 {
+    font-style: italic;
+    background-color: beige;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-right: 16em;
+    text-align: right;
+}
+
+#mainTitulo {
+    text-align: center;
+    background-color:darkgray;
+    color:rgb(105, 17, 17)
+}
+
+#imagen {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(220, 238, 254);
+}

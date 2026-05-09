@@ -1,0 +1,98 @@
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 8em;
+}
+
+.abecedario {
+    font-size: 14em;
+}
+
+@font-face { 
+    font-family: "Fuente-primera";
+    src: url(../fuentes/Peace\ Man.otf); 
+}
+
+.bloque1 {
+    padding-left: 1.5em;
+    font-family: 'Fuente-primera', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.5em;
+    background-color: #A29BFE;
+}
+
+@font-face {
+    font-family: Fuente-segunda;
+    src: url(../fuentes/Tokyo.ttf);
+}
+
+.bloque2 {
+    padding-left: 1.5em;
+    font-family: 'Fuente-segunda', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.75em;
+    background-color: #45B7D1;
+}
+
+@font-face {
+    font-family: fuente-tercera;
+    src: url(../fuentes/KamillaBlue-Regular.otf);
+}
+
+.bloque3 {
+    padding-left: 1.3em;
+    font-family: 'fuente-tercera', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.7em;
+    background-color: #FECA57;
+}
+
+@font-face {
+    font-family: esta-fuente-conl-letra-espanola;
+    src: url(../fuentes/Swash\ Break\ Trial.otf);
+}
+
+.bloque4 {
+    padding-left: 1.2em;
+    font-family: 'esta-fuente-conl-letra-espanola', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.5em;
+    background-color: #96CEB4;
+}
+
+@font-face {
+    font-family: fuente-quinta;
+    src: url(../fuentes/Aerosoldier_PERSONAL_USE_ONLY.otf);
+}
+
+.bloque5 {
+    padding-left: 1.4em;
+    font-family: 'fuente-quinta', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.5em;
+    background-color: #FF9FF3;
+}
+
+@font-face {
+    font-family: fuente-sexta;
+    src: url(../fuentes/Rocket\ Thunder\ Shadow.ttf);
+}
+
+.bloque6 {
+    padding-left: 1.5em;
+    font-family: 'fuente-sexta', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.75em;
+    background-color: #636E72;
+}
+
+@font-face {
+    font-family: 'fuente-septima';
+    src: url('../fuentes/Minecrafter.Reg.ttf');
+
+}
+
+.bloque7 {
+    padding-left: 1.5em;
+    padding-top: 0.25em;
+    font-family: 'fuente-septima', Arial, Helvetica, sans-serif;;
+    letter-spacing: 0.75em;
+    background-color: #FF686B;
+}
+

@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', Helvetica sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 1.5em;
+}
+
+/* Cabecera */
+.cabecera {
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2em 1em;
+    margin-bottom: 2em;
+}
+
+#nombre {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#profesion {
+    font-size: 1.2em;
+    font-style: italic;
+    
+}
+
+/* Foto */
+.foto-seccion {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.seccion {
+    max-width: 800px;
+    margin: 1.5em auto;
+    background-color: #fff;
+    padding: 1.5em;
+    border-left: 4px solid #3498db;     /* línea borde con color */
+}
+
+.titulo-seccion {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #bdc3c7;   /* línea borde con color */
+    padding-bottom: 0.5em;
+}
+
+.descripcion {
+    margin-top: 0.3em;
+    font-size: 0.95em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.aficiones-texto {
+    font-size: 1em;
+    color: #555;
+}
+
+
+#pie {
+    text-align: center;
+    margin-top: 3em;
+    padding: 1.5em;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    
+}

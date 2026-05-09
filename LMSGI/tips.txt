@@ -1,0 +1,54 @@
+nav p
+todos los p que sean descendientes del nav
+
+nav>p
+todos los p que sean HIJOS del nav
+
+nav+p
+todos los p que estén adyacentes a un nav
+
+
+
+
+
+text-align: center; 	cuando no tengo display flex, solo para elementos de línea
+justify-content: center;	cuando tengo display flex para centrar
+
+
+
+
+
+chequear:	.ficha>img+p{}  //los párrafos que están a continuación de una imagen dentro de la clase ficha
+
+
+
+
+
+CONTAINER
+align items, el mas interesantes es el stretch para maquetar páginas completas (pone full columnas)
+
+
+
+
+
+REMEMBER
+margin auto para centrar todo
+
+
+
+
+
+REMEMBER
+jsutify-content para horizontalidad
+align-items para verticalidad
+
+
+
+
+
+REMEMBER
+* {
+box sizing border box
+}
+
+flex basis para dar ancho a algo flex

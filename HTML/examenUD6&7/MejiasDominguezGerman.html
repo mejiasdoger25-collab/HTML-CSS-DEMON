@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Gente con Clase y Etiqueta</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*ESTILOS GENERALES*/
+		@font-face{
+			font-family: "SVQ-Justa";
+			src: url('fonts/SVQ-Justa.ttf');
+		}
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #FFAB60;
+		}
+		header h1{
+			text-align: center;
+			font-family: SVQ-Justa;
+			color: #DC143C;
+		}
+		
+		/*ESTILOS PARA EL EJERCICIO 1. TABLAS*/
+		table {
+			width: 45%;
+			margin: 30px auto;
+			border-collapse: collapse;
+			font-family: 'Lucida Sans', sans-serif;
+		}
+
+		caption {
+			font-size: 1.6em;
+			font-weight: bold;
+			color: #DC143C;
+			text-align: center;
+			margin-bottom: 15px;
+			display: block;
+		}
+
+		th, td {
+			border: 2px solid #DC143C;
+			padding: 8px 10px;
+			text-align: center;
+			vertical-align: middle;
+			height: 40px;
+		}
+
+		th:nth-child(1), td:nth-child(1) { width: 50%; }   /*producto */
+		th:nth-child(2), td:nth-child(2) { width: 20%; }   /*precio */
+		th:nth-child(3), td:nth-child(3) { width: 30%; }   /*observaciones */
+
+		tfoot tr {
+			height: 20px;
+		}
+
+		tfoot td {
+			text-align: left;
+			font-size: 0.8em;
+			height: 20px;
+		}
+
+		/*FIN ESTILOS PARA EL EJERCICIO 1. TABLAS */
+
+		/*ESTILOS PARA EL EJERCICIO 2. FORMULARIOS */
+		form{
+			font-family: 'Lucida Sans', sans-serif;
+			display: flex;
+			flex-wrap: wrap;
+			width: 80%;
+			margin: 20px auto;
+			justify-content: space-between;
+			autocomplete: on; 
+		}
+
+		fieldset {
+			border: 2px solid #DC143C;
+			padding: 15px;
+			margin-bottom: 20px;
+			border-radius: 0;
+		}
+
+		legend {
+			font-weight: bold;
+			color: #DC143C;
+		}
+
+		
+		.datos-container {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+			width: 100%;
+		}
+
+		
+		#pedido-fieldset {
+			width: 100%;
+		}
+
+		#productos{			
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 15px;
+		}
+		#productos .producto{
+			flex: 1 1 30%;   
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-bottom: 10px;
+		}
+		#productos .producto .tipo{
+			flex: 0 0 50%;   
+			display: flex;
+			align-items: center;
+		}
+		#productos .producto .cantidad{
+			flex: 0 0 20%;   
+		}
+		#productos .producto .opciones{
+			flex: 1 1 100%;
+			padding-left: 20px;   
+			font-size: 0.9em;
+		}
+
+		
+		.botones {
+			width: 100%;
+			margin-top: 10px;
+			display: flex;
+			flex-direction: column;    
+			align-items: center;      
+			gap: 8px;
+		}
+		.botones input {
+			border: none;
+			font-weight: bold;
+			cursor: pointer;
+			color: white;
+			background: #DC143C;
+		}
+		/*botón HACER PEDIDO */
+		.botones input[type="submit"] {
+			width: 50%;                 
+			height: 50px;
+		}
+		/*botón borrar todo */
+		.botones input[type="reset"] {
+			width: 50%;                 
+			height: 25px;
+		}
+
+		.form-group {
+			display: flex;
+			align-items: center;
+			margin-bottom: 12px;
+		}
+		.form-group label {
+			flex: 0 0 30%;
+			text-align: right;
+			padding-right: 5px;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+		.form-group input {
+			flex: 1;
+			padding: 8px;
+			border: 1px solid #DC143C;
+		}
+
+		.form-group-pago label {
+			flex: 0 0 50%;
+			text-align: right;
+			padding-right: 5px;
+		}
+
+		input:focus,
+		select:focus {
+			border: 2px solid #DC143C;
+			outline: none;
+		}
+
+		input[type="checkbox"]:checked + label,
+		input[type="radio"]:checked + label {
+			color: #DC143C;
+		}
+		/*FIN ESTILOS PARA EL EJERCICIO 2. FORMULARIOS */
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Caseta "Gente con Clase y Etiqueta"</h1>
+	</header>
+	<main>
+		<section>
+			<!-- EJERCICIO 1: TABLA -->
+			<table>
+				<caption>TABLA DE PRECIOS</caption>
+				
+				<thead>
+					<tr>
+						<th>Producto</th>
+						<th>Precio</th>
+						<th>Observaciones</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Botella de Manzanilla</td>
+						<td>10€</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jarra de Rebujito</td>
+						<td>15€</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Refresco</td>
+						<td>2€</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Tortilla de patatas</td>
+						<td>8€</td>
+						<td>Mayonesa +1€</td>
+					</tr>
+					<tr>
+						<td>Croquetas</td>
+						<td>5€ / 10€</td>
+						<td>Media: 5ud <br/> Ración: 12ud</td>
+					</tr>
+					<tr>
+						<td>Lagrimitas de pollo</td>
+						<td>9€ / 16€</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cazón en adobo</td>
+						<td>8€ / 14€</td>
+						<td>Opción sin gluten</td>
+					</tr>
+					<tr>
+						<td>Choco Frito</td>
+						<td>11€ / 20€</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Solomillo al Whisky</td>
+						<td>10€ / 19€</td>
+						<td></td>
+					</tr>
+				</tbody>
+
+				<tfoot>
+					<tr>
+						<td colspan="3">Todos los precios incluyen IVA.</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+
+		<section>
+			<!-- EJERCICIO 2: FORMULARIO -->
+			<form autocomplete="on">
+				
+				<fieldset id="pedido-fieldset">
+					<legend>Su Pedido</legend>
+					<p>Marque los productos que desee pedir y, junto a él, la cantidad deseada</p>
+						
+					<div id="productos">						
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="manzanilla">
+								<label for="manzanilla">Botella de manzanilla</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-manzanilla" value="0" min="0" max="4" required>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="rebujito">
+								<label for="rebujito">Jarra de Rebujito</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-rebujito" value="0" min="0" max="4" required>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="refresco">
+								<label for="refresco">Refresco</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-refresco" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<select id="tipo-refresco">
+									<option>Cola</option>
+									<option>Limón</option>
+									<option>Naranja</option>
+									<option>Cola Cero</option>
+									<option>7 arriba</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="tortilla">
+								<label for="tortilla">Tortilla</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-tortilla" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="checkbox" id="mayonesa">
+								<label for="mayonesa">Con Mayonesa</label>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="croquetas">
+								<label for="croquetas">Croquetas</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-croquetas" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="radio" name="croquetas" id="croq-media" value="media">
+								<label for="croq-media">Media</label>
+								<input type="radio" name="croquetas" id="croq-racion" value="racion">
+								<label for="croq-racion">Ración</label>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="lagrimitas">
+								<label for="lagrimitas">Lagrimitas de pollo</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-lagrimitas" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="radio" name="lagrimitas" id="lag-media" value="media">
+								<label for="lag-media">Media</label>
+								<input type="radio" name="lagrimitas" id="lag-racion" value="racion">
+								<label for="lag-racion">Ración</label>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="cazon">
+								<label for="cazon">Cazón en Adobo</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-cazon" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="radio" name="cazon" id="caz-media" value="media">
+								<label for="caz-media">Media</label>
+								<input type="radio" name="cazon" id="caz-racion" value="racion">
+								<label for="caz-racion">Ración</label>
+							</div>
+							<div class="opciones">
+								<input type="checkbox" id="cazon-gluten">
+								<label for="cazon-gluten">Sin gluten</label>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="choco">
+								<label for="choco">Choco Frito</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-choco" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="radio" name="choco" id="cho-media" value="media">
+								<label for="cho-media">Media</label>
+								<input type="radio" name="choco" id="cho-racion" value="racion">
+								<label for="cho-racion">Ración</label>
+							</div>
+							<div class="opciones">
+								<input type="checkbox" id="choco-gluten">
+								<label for="choco-gluten">Sin gluten</label>
+							</div>
+						</div>
+
+						<div class="producto">
+							<div class="tipo">
+								<input type="checkbox" id="solomillo">
+								<label for="solomillo">Solomillo al Whisky</label>
+							</div>
+							<div class="cantidad">
+								<input type="number" id="cant-solomillo" value="0" min="0" max="4" required>
+							</div>
+							<div class="opciones">
+								<input type="radio" name="solomillo" id="sol-media" value="media">
+								<label for="sol-media">Media</label>
+								<input type="radio" name="solomillo" id="sol-racion" value="racion">
+								<label for="sol-racion">Ración</label>
+							</div>
+						</div>
+					</div>					
+				</fieldset>
+
+				<div class="datos-container">
+					<fieldset style="flex: 0 0 54%;">
+						<legend>Sus datos</legend>
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="text" id="nombre" placeholder="Nombre" maxlength="25" size="50" required>
+						</div>
+						<div class="form-group">
+							<label for="apellidos">Apellidos</label>
+							<input type="text" id="apellidos" placeholder="Apellidos" maxlength="50" size="50" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Correo electrónico</label>
+							<input type="email" id="email" placeholder="direccion@correo.com" maxlength="50" size="50" required>
+						</div>
+						<div class="form-group">
+							<label for="telefono">Teléfono</label>
+							<input type="tel" id="telefono" placeholder="612345678" maxlength="9" size="50" pattern="[0-9]{9}">
+						</div>
+					</fieldset>
+
+					<fieldset style="flex: 0 0 45%;">
+						<legend>Sus datos de pago</legend>
+						<div class="form-group form-group-pago">
+							<label for="titular">Titular de la tarjeta</label>
+							<input type="text" id="titular" placeholder="Nombre y apellidos" size="20" required>
+						</div>
+						<div class="form-group form-group-pago">
+							<label for="num-tarjeta">Número de tarjeta</label>
+							<input type="text" id="num-tarjeta" placeholder="su número sin espacios" maxlength="16" pattern="[0-9]{16}" required>
+						</div>
+						<div class="form-group form-group-pago">
+							<label for="caducidad">Fecha de Caducidad</label>
+							<input type="month" id="caducidad" required>
+						</div>
+						<div class="form-group form-group-pago">
+							<label for="cvc">Código de Seguridad</label>
+							<input type="password" id="cvc" maxlength="3" pattern="[0-9]{3}" placeholder="CVC" required>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="botones">
+					<input type="submit" value="HACER PEDIDO">
+					<input type="reset" value="Borrar todo">
+				</div>
+
+			</form>
+		</section>
+	</main>
+</body>
+</html>

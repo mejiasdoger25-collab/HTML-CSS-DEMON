@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 2px solid red; 
+            border-width: 5px;
+            /*border-style:dotted;*/
+            border-top-left-radius: 82px;
+        }
+        #paddingg {
+            padding: 80px;
+            max-width: 1000000px;
+        }
+        #marggin {
+            margin: 10px;
+        }
+        div{
+            box-sizing: border-box 60px;
+        }
+        #bbox{
+           box-sizing: content-box; 
+        }
+
+        .caja1 {
+        width: 200px;
+        padding: 20px;
+        border: 10px solid blue;
+        box-sizing: content-box;
+        }
+
+        .caja2 {
+        width: 200px;
+        padding: 20px;
+        border: 10px solid green;
+        box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            flex-direction:row-reverse;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+    </header>
+    <header>
+        <h1>HAAAAH</h1>
+    </header>
+    <main>
+        <div><p id="paddingg">esto es el primer párrafo con un gran padding</p></div>
+        <p id="marggin">Este es el segundo párrafo con algo de margin</p>
+        <p id="bbox">este no tiene ni padding ni margin, este tiene box-sizing:border-box;</p>
+
+        <p class="caja1">este ejemplo es con box-sizing: content-box</p>
+        <p class="caja2">este ejemplo es con box-sizing: border-box</p>
+
+
+    </main>
+
+    <footer>
+        (esto es el footer)
+    </footer>
+
+</body>
+</html>

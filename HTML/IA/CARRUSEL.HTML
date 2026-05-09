@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrusel - Exploración Espacial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Exploración Espacial</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li><a href="indice.html">Índice</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="carrusel.html">Carrusel</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="content">
+      <h2>Carrusel de Imágenes del Espacio</h2>
+      <div class="carousel">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <div class="slides">
+          <div class="slide">
+            <img src="images/space1.jpg" alt="Espacio 1">
+          </div>
+          <div class="slide">
+            <img src="images/space2.jpg" alt="Espacio 2">
+          </div>
+          <div class="slide">
+            <img src="images/space3.jpg" alt="Espacio 3">
+          </div>
+        </div>
+        <div class="nav-label">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+        </div>
+      </div>
+    </div>
+    <aside>
+      <div class="ad">
+        <img src="images/ad1.jpg" alt="Anuncio inventado 1">
+        <p>Anuncio relacionado: Viajes Espaciales</p>
+      </div>
+      <div class="ad">
+        <video src="videos/ad_video.mp4" autoplay loop playsinline>
+          Tu navegador no soporta video.
+        </video>
+        <p>Anuncio molesto: ¡Oferta especial!</p>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <div class="column">
+      <p>Autor: [Tu Nombre y Apellido]</p>
+      <p>Contacto: email@example.com</p>
+    </div>
+    <div class="column">
+      <p>Redes sociales: <a href="#">Twitter</a>, <a href="#">Instagram</a></p>
+    </div>
+    <div class="column">
+      <p>Aviso legal: Contenidos de fuentes públicas. Derechos reservados.</p>
+      <p>Origen de contenidos: NASA, Unsplash, etc.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    
+    display: flex;                  /* para centrar el cartel en la página*/
+    justify-content: center;
+    margin-top: 60px    ;
+    background: #b2b2b2;            /* color de fondo de página */
+}
+
+.cartel {
+    /* a. Tamaño exacto */
+    width: 800px;
+    height: 565px;
+
+   background-image: url(../imgs/fondo_jovenes.png), url(../imgs/fondo_trama.png);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom, center;
+    background-size: 75%, auto;
+
+
+    /* c. Texto separado 100px del borde superior y 50px de los laterales */
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    border: 0 solid transparent;      /* e. Borde invisible */
+    border-radius: 50px;              /* f. Las esquinas están redondeadas 50px. */
+}
+
+.cartel p {
+    margin: auto;
+
+    /* h. Fuente y estilo del texto */
+    font-family: Kristen ITC, Berlin Sans FB, Arial;
+    font-size: 35pt;                 
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}

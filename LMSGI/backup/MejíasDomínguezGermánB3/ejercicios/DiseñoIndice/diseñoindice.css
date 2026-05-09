@@ -1,0 +1,53 @@
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #d1d1d1; 
+    color: #333; 
+    margin: 0;
+    line-height: 1.6; 
+}
+
+h1 {
+    text-align: center; 
+    font-size: 2.5em; 
+    color:red;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3498db; /* línea inferior decorativa */
+    padding-bottom: 10px;
+}
+
+hr {
+    height: 2px; 
+    margin: 30px; 
+}
+
+p {
+    font-size: 1.2em; 
+    text-align: justify; 
+    margin-bottom: 30px;
+    padding: 0 10%;
+}
+
+ol {
+    padding-left: 40px; 
+    margin: 60px;
+}
+
+ol li {
+    margin-bottom: 15px; /* espacio entre los 5 ítems que he puesto */
+    font-size: 1.2em; 
+}
+
+ol li a {
+    color: #3498db; 
+    text-decoration: none; /* para quietar el subrayado */
+    font-weight: bold; 
+}
+
+
+p strong em {
+    color: #2c3e50; 
+    font-style: italic; 
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: 1.4em;
+}

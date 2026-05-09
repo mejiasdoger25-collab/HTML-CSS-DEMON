@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio11</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <style>
+    /*TODO*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /*para controlar el tamaño de las cajas*/
+    }
+
+    /*FONDO*/
+    body {
+      background: linear-gradient(135deg, #941b1b, #a924dd);
+      height: 100vh;  /*para centrarlo*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /*BOTÓN*/
+    .boton {
+      border: 6px dashed rgb(255, 0, 0);
+      background: black;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /*DISCO*/
+    .disco {
+      border: 6px solid black;
+      width: 200px;
+      height: 200px;
+      background: red;
+      border-radius: 50%; /*para que sea redondo*/
+      position: relative;
+    }
+
+    /*FLECHA*/
+    .flecha {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 6px;
+      height: 80px;
+      background: rgb(0, 0, 0);
+      transform: translateX(-50%);  /*para darle animación*/
+    }
+
+
+
+    /*ANIMACIÓN*/
+    @keyframes girar {  /*para hacer la animación*/
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /*ACTIVACIÓN CON HOVER*/
+    .boton:hover.disco {
+      animation: girar 60s linear infinite;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="boton">GIRAR LA IMPARABLE</div>
+
+  <div class="disco">
+    <div class="flecha"></div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout básico</title>
+  <style>
+    /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía general */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #5b84b1;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Menú */
+nav {
+  background-color: #a4c25a;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  min-height: 400px;    /*CHEQUEAR ESTO PQ NO LO HE DEDUCIDO*/
+}
+
+/* Aside izquierdo */
+aside.left {
+  background-color: #5b84b1;
+  color: white;
+  width: 20%;
+  padding: 15px;
+}
+
+/* Contenido */
+main {
+  background-color: white;
+  width: 60%;
+  padding: 20px;
+}
+
+/* Aside derecho */
+aside.right {
+  background-color: #5b84b1;
+  color: white;
+  width: 20%;
+  padding: 15px;
+}
+
+/* Elementos internos */
+.foto {
+  background-color: white;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.publicidad {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #a4c25a;
+  text-align: center;
+  padding: 10px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mi primer layout</h1>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Quiénes somos</a>
+    <a href="#">Qué hacemos</a>
+    <a href="#">Dónde estamos</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <aside class="left">
+      <h3>Últimas noticias</h3>
+      <p>Noticia 1</p>
+      <p>Noticia 2</p>
+      <p>Noticia 3</p>
+    </aside>
+
+    <main>
+      <h2>Artículo 1</h2>
+      <p>Lorem ipsum dolor sit amet...</p>
+
+      <h2>Artículo 2</h2>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </main>
+
+    <aside class="right">
+      <h3>Galería</h3>
+      <div class="foto"></div>
+      <div class="foto"></div>
+
+      <div class="publicidad">Publicidad</div>
+    </aside>
+  </div>
+
+  <footer>
+    © 1DAM
+  </footer>
+
+</body>
+</html>

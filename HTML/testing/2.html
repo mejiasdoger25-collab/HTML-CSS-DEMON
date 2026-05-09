@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flex Wrap Ejemplo</title>
+<style>
+    .container {
+        width: 500px;
+        min-height: 0px;    /*con esta línea evito que la caja que contiene a las demás cajas se quede pequeña pues se ajusta*/
+        background: #f0f0f0;
+        border: 2px solid #444;
+        
+        display: flex;
+        flex-wrap: wrap;       /* ★ Aquí está la magia */
+        gap: 12px;             /* espacio entre elementos */
+        padding: 15px;
+
+        
+    }
+
+    .item {
+        width: 120px;
+        height: 80px;
+        /*box-sizing: border-box;   con esta línea lo que haría sería hacer que cada caja ocupa justo lo que ocupa el contenido de la misma, es decir, se ajusta*/
+        background: #ff6b6b;
+        color: white;
+        display: flex;
+        align-items: center;    /*me alinea los items en el medio de verticalidad*/
+        justify-content:center; /*me alinea los items en el medio de horizontalidad*/
+        font-weight: bold;
+        font-size: 1.3rem;
+        border-radius: 8px;
+        margin: auto;   /*con esto consigo que se repartan el ancho de la caja container que contiene a todos los items y que no sobre espacio de la misma*/
+    }
+
+    .item {
+    width: 120px;
+    height: 80px;
+    background: #ff6b6b;
+    border-radius: 8px;
+    overflow: hidden; /* importante */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+
+
+</div>
+
+
+<div class="item">
+    <img src="https://via.placeholder.com/300x200" alt="">
+</div>
+
+</body>
+</html>

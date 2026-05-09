@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio10</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<style>
+/*TODO*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /*para controlar mejor el tamaño de las cajas*/
+    font-family: Arial, sans-serif;
+}
+
+/*FONDO*/
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff4520, #ff9812);
+}
+
+/*CONTENEDOR DEK BOTÓN*/
+.contenedor {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+/* BOTÓN*/
+.boton {
+    width: 45px;
+    height: 45px;
+    background: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;  /*centrado verticacl*/
+    justify-content: center;  /*centrado horizontal*/
+}
+
+/*MENÚ*/
+.menu {
+    position: fixed;
+    top: 80px;           /*para no respetar las capas y que el botón no salga encima del menú*/
+    left: -260px;     /*oculto para que no se vea hasta que haces hover*/
+    width: 260px;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    transition: left 0.4s ease;   /*para animar*/
+}
+
+/*HOVER ACTIVA MENÚ*/
+.contenedor:hover .menu {
+    left: 0;
+}
+
+/*CABECERA DEL MENÚ*/
+.menu h2 {
+    background: #10cfff;
+    color: white;
+    padding: 12px;
+    text-align: center; /*centrado*/
+}
+
+/*LISTAS*/
+.menu ul {
+    list-style: none; /*para quitar las líneas de abajo*/
+}
+
+.menu li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;  /*para poner una separación por abajo de cada opción*/
+}
+
+.submenu li {
+    padding-left: 25px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <div class="boton"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+
+    <nav class="menu">
+        <h2>MENÚ <i class="bi bi-plus-square-dotted"></i></h2>
+        <ul>
+            <li>Menú 1</li>
+            <ul class="submenu">
+                <li>Submenú 1</li>
+                <li>Submenú 2</li>
+                <li>Submenú 3</li>
+            </ul>
+            <li>Menú 2</li>
+            <li>Menú 3</li>
+        </ul>
+    </nav>
+</div>
+
+</body>
+</html>

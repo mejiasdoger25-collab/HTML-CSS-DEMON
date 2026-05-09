@@ -1,0 +1,26 @@
+.rotulo{
+display:block;
+text-align: center;                    /* a. Al ser un título, estará basado en h1 y texto centrado*/
+
+width: 1250px;                         /* b. El rótulo tiene un tamaño de 1250x250px */
+height: 250px;                         /* b. El rótulo tiene un tamaño de 1250x250px */
+margin: 50px auto;                     /* para centrar el bloque horizontalmente */
+background-color: rgb(250, 214, 220);           /* e. Un color de fondo. */
+
+border: 5px dotted rgb(253, 180, 85);            /*d. Un borde del mismo color que la fuente, de 5px de ancho y con aspecto punteado y esquinas redondeadas.*/
+border-radius: 50px;                               /*d. Un borde del mismo color que la fuente, de 5px de ancho y con aspecto punteado y esquinas redondeadas.*/
+
+padding: 40px 80px;                 /* 40px arriba/abajo – 80px izquierda/derecha */
+box-sizing: border-box;             /* importante para que el 1250×250 incluya el padding */
+
+@font-face {
+    font-family: 'KristenITC';                      
+    src: url('../fuentes/kristen-itc.ttf');         /*fuente proporcionada*/
+    font-weight: normal;    
+    font-style: normal;
+}
+
+font-family: 'KristenITC', Arial, sans-serif;       /*fuente aplicada*/
+    font-size: 25pt;
+    color: rgb(253, 180, 85);
+}

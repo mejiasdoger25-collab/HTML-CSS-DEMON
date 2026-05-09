@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 6 - boletín 6</title>
+        <style type="text/css">
+
+            table{
+                font-size: 50px;
+                margin-left: 30px;
+                text-align: center;
+                border-collapse: collapse;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: black;
+                background-color: #ffbd7b;
+            }
+
+            th{
+                background-color: white;
+                padding: 4px 16px;
+            }
+            td{
+                padding: 1px 8.100px;
+            }
+
+            td:first-child, td:last-child{
+                background-color: white;
+                font-size: 46px;
+            }
+            /*even para los pares*/
+            /*odd para los impares*/
+            tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd){
+                background-color: #dc8b3f;
+            }
+
+            .tableros-container {
+            display: flex;
+            margin-bottom: 40px;           
+            flex-wrap: wrap;     
+            }
+
+            .tablero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h2 {
+                text-align: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h2>Tablero con coordenadas</h2>
+        <div class="container">
+            <div class="tablero">
+                <table summary="Tablero doble ajederez">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>h</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>8</th><td><span class="coord">a8</span></td><td><span class="coord">b8</span></td>
+                            <td><span class="coord">c8</span></td><td><span class="coord">d8</span></td>
+                            <td><span class="coord">e8</span></td><td><span class="coord">f8</span></td>
+                            <td><span class="coord">g8</span></td><td><span class="coord">h8</span></td><th>8</th></tr>
+                        <tr><th>7</th><td><span class="coord">a7</span></td><td><span class="coord">b7</span></td>
+                            <td><span class="coord">c7</span></td><td><span class="coord">d7</span></td>
+                            <td><span class="coord">e7</span></td><td><span class="coord">f7</span></td>
+                            <td><span class="coord">g7</span></td><td><span class="coord">h7</span></td><th>7</th></tr>
+                        <tr><th>6</th><td><span class="coord">a6</span></td><td><span class="coord">b6</span></td>
+                            <td><span class="coord">c6</span></td><td><span class="coord">d6</span></td>
+                            <td><span class="coord">e6</span></td><td><span class="coord">f6</span></td>
+                            <td><span class="coord">g6</span></td><td><span class="coord">h6</span></td><th>6</th></tr>
+                        <tr><th>5</th><td><span class="coord">a5</span></td><td><span class="coord">b5</span></td>
+                            <td><span class="coord">c5</span></td><td><span class="coord">d5</span></td>
+                            <td><span class="coord">e5</span></td><td><span class="coord">f5</span></td>
+                            <td><span class="coord">g5</span></td><td><span class="coord">h5</span></td><th>5</th></tr>
+                        <tr><th>4</th><td><span class="coord">a4</span></td><td><span class="coord">b4</span></td>
+                            <td><span class="coord">c4</span></td><td><span class="coord">d4</span></td>
+                            <td><span class="coord">e4</span></td><td><span class="coord">f4</span></td>
+                            <td><span class="coord">g4</span></td><td><span class="coord">h4</span></td><th>4</th></tr>
+                        <tr><th>3</th><td><span class="coord">a3</span></td><td><span class="coord">b3</span></td>
+                            <td><span class="coord">c3</span></td><td><span class="coord">d3</span></td>
+                            <td><span class="coord">e3</span></td><td><span class="coord">f3</span></td>
+                            <td><span class="coord">g3</span></td><td><span class="coord">h3</span></td><th>3</th></tr>
+                        <tr><th>2</th><td><span class="coord">a2</span></td><td><span class="coord">b2</span></td>
+                            <td><span class="coord">c2</span></td><td><span class="coord">d2</span></td>
+                            <td><span class="coord">e2</span></td><td><span class="coord">f2</span></td>
+                            <td><span class="coord">g2</span></td><td><span class="coord">h2</span></td><th>2</th></tr>
+                        <tr><th>1</th><td><span class="coord">a1</span></td><td><span class="coord">b1</span></td>
+                            <td><span class="coord">c1</span></td><td><span class="coord">d1</span></td>
+                            <td><span class="coord">e1</span></td><td><span class="coord">f1</span></td>
+                            <td><span class="coord">g1</span></td><td><span class="coord">h1</span></td><th>1</th></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>h</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <br/><br/><br/>
+
+            <h2>Tablero con piezas</h2>
+            <div class="tablero">
+                <table summary=" Tablero de ajedrez con piezas">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>d</th>
+                            <th>e</th>
+                            <th>f</th>
+                            <th>g</th>
+                            <th>h</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8</th>
+                            <td>&#9820;</td>
+                            <td>&#9822;</td>
+                            <td>&#9821;</td>
+                            <td>&#9819;</td>
+                            <td>&#9818;</td>
+                            <td>&#9821;</td>
+                            <td>&#9822;</td>
+                            <td>&#9820;</td>
+                            <th>8</th>
+                        </tr>
+
+                        <tr>
+                            <th>7</th>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <td>&#9823;</td>
+                            <th>7</th>
+                        </tr>
+
+                        <tr>
+                            <th>6</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <th>6</th>
+                        </tr>
+
+                        <tr>
+                            <th>5</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <th>5</th>
+                        </tr>
+
+                        <tr>
+                            <th>4</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <th>4</th>
+                        </tr>
+
+                        <tr>
+                            <th>3</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <th>3</th>
+                        </tr>
+
+                        <tr>
+                            <th>2</th>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <td>&#9817;</td>
+                            <th>2</th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <td>&#9814;</td>
+                            <td>&#9816;</td>
+                            <td>&#9815;</td>
+                            <td>&#9813;</td>
+                            <td>&#9814;</td>
+                            <td>&#9815;</td>
+                            <td>&#9816;</td>
+                            <td>&#9814;</td>
+                            <th>1</th>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>d</th>
+                            <th>e</th>
+                            <th>f</th>
+                            <th>g</th>
+                            <th>h</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

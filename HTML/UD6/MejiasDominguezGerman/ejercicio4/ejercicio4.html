@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 4 - boletín 6</title>
+        <style type="text/css">
+            body{
+                background-color: rgb(194, 246, 249);
+            }
+
+            table{
+                border-collapse: collapse;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+
+            span{
+                font-size: 30px;  
+            }
+
+            caption{
+                text-align: left;
+            }
+
+            tr{
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                font-size: 20px;
+            }
+
+            th{
+                background-color: white;
+                font-weight: normal;
+                padding: 11px 12px;
+            }
+
+            td{
+                padding: 10px 12px;
+            }
+
+            td:first-child{
+                font-weight: bolder;
+            }
+
+            tr:nth-child(odd){
+                background-color: rgb(226, 254, 255);
+            }
+
+            .subrayado{
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+
+            .verde{
+                color: rgb(1, 226, 1);
+            }
+
+            .rojo{
+                color: red;
+            }
+
+            tr:hover{
+                background-color: rgb(180, 247, 247);
+            }
+
+            .verde:hover{
+                background-color: rgb(1, 226, 1);
+                color: black;
+            }
+
+            .rojo:hover{
+                background-color: red;
+                color: black;
+            }
+
+            td:hover{
+                background-color: blue;
+                color: white;
+            }
+
+            .envoltorio{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 50px;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="envoltorio">
+            <table summary="Tabla con la evolución de los principales índices bursátiles mundiales">
+                <caption><span><strong>Índices</strong></span><hr></hr></caption>
+                <thead>
+                    <tr>
+                        <th>Índice</th>
+                        <th>Último</th>  
+                        <th>Var. %</th>
+                        <th>Var.</th>
+                        <th>Máx.</th>	
+                        <th>Mín.</th>
+                        <th>Volumen</th>
+                        <th class="subrayado">Capital</th>	
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IBEX35</td>
+                        <td>18.246,10</td>
+                        <td class="verde">+1,47</td>
+                        <td class="verde">+282,30</td>
+                        <td>18.266,10</td>
+                        <td>18.115,70</td> 	
+                        <td></td>
+                        <td>1M</td>
+                        <td>17:12</td>
+                    </tr>
+                    <tr>
+                        <td>DAX 30</td>
+                        <td>24.044,22</td>
+                        <td class="verde">+1,27</td>
+                        <td class="verde">+331,78</td>
+                        <td>24.087,30</td>
+                        <td>23.938,11</td> 	
+                        <td></td>
+                        <td>2M</td>
+                        <td>19:54</td>
+                    </tr>
+                    <tr>				 	 	
+                        <td>NIKKEI 225</td>
+                        <td>57.877,39</td>
+                        <td class="verde">+2,53</td>
+                        <td class="verde">+1.374,92</td>
+                        <td>57.979,82</td>
+                        <td>57.010,18</td>
+                        <td></td>
+                        <td></td>
+                        <td>19:48</td>
+                    </tr>
+                    <tr>				 	
+                        <td>DOW JONES 30</td>
+                        <td>49.581,88</td>
+                        <td class="verde">+0,65</td>
+                        <td class="verde">+312,59	</td>
+                        <td>48.353,70</td>
+                        <td>48.192,30</td>
+                        <td>124.010.008</td>
+                        <td></td>
+                        <td>20:08</td>
+                    </tr>
+                    <tr>		 		
+                        <td>NASDAQ</td>
+                        <td>23.562,46</td>
+                        <td class="verde">+1,72</td>
+                        <td class="rojo">-386,39</td>
+                        <td>23.572,61</td>
+                        <td>23.331,50</td>
+                        <td></td>
+                        <td>18M</td>
+                        <td>19:56</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

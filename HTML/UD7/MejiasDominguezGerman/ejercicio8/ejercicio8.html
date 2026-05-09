@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8 - Boletín 6v2</title>
+    <style type="text/css"> 
+    
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        font-size: 20px;
+    }
+
+    h1{
+        background-color: rgb(178, 152, 220);
+        color: white;
+        text-align: center;
+        border: 3px solid black;
+        text-indent: 5px;
+        border-radius: 8px;        
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+
+        display: inline-block;     
+        margin: 20px auto;        
+        padding: 10px 30px;        
+        width: auto;               
+    }
+
+    form{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    input{
+        font-size: 20px;
+    }
+
+    input:last{
+        background-color: rgb(178, 152, 220);
+    }
+
+    legend{
+        background-color: rgb(178, 152, 220);   
+        padding: 2px 4px;
+        border: 2px solid black;
+        color: white;
+        border-radius: 8px;        
+    }
+
+    fieldset{
+        background-color: rgb(185, 250, 248);
+        border: 3px solid rgb(178, 152, 220);
+        border-color: rgb(178, 152, 220);
+        border-radius: 8px;        
+    }
+
+    .fieldestLeft, .fieldestCenter{
+        display: flex;
+    }
+
+    .habitacion{
+        margin-left: 50px;
+    }
+
+    .fechaSalida{
+        margin-left: 100px;
+    }
+
+    .reservar{
+        background-color: rgb(178, 152, 220);
+        color: white;
+        padding: 6px;
+        margin-top: 10px;
+        width: 100%;
+        transition: 0.5;
+    }
+
+    .reservar:hover{
+        background-color: rgb(111, 45, 189);
+        color: black;
+        padding: 6px;
+        margin-top: 10px;
+        width: 100%;
+    }   
+    
+    .envoltorio-main{
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+    }
+    </style>
+</head>
+    <body>
+
+        <div class="envoltorio-main">
+            <h1>FORMULARIO PARA RESERVAS DE HOTEL</h1>
+            <form method="post" action="#" name="formulario8">
+                <fieldset class="fieldestLeft">
+                    <legend><strong>Gestión de reservas</strong></legend>
+                    <div class="huespedes">
+                        <label for="huespedes">Número huéspedes</label></br>
+                        <input type="number" name="huespedes" id="huespedes" value="1" min="1" max="20">
+                    </div>
+
+                    <div class="habitacion">
+                        <label for="habitacion">Tipo habitación</label></br>
+                        <input type="text" name="habitacion" id="habitacion" list="opciones" size="25">
+                        <datalist id="opciones">
+                            <option value="Individual"></option>
+                            <option value="Doble"></option>
+                            <option value="Cuádruple"></option>
+                            <option value="Suite"></option>
+                            <option value="VIP"></option>
+                            <option value="Familiar"></option>
+                            <option value="Matrimonial"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+                </br>
+                <fieldset class="fieldestCenter">
+                    <legend><strong>Fechas</strong></legend>
+                    <div class="fechaEntrada">
+                        <label for="fechaEnt">Fecha entrada</label></br>
+                        <input type="date" name="fechaEnt" id="fechaEnt" min="1900-01-01" max="2023-12-31">
+                    </div>
+
+                    <div class="fechaSalida">
+                        <label for="fechaSal">Fecha salida</label></br>
+                        <input type="date" name="fechaSal" id="fechaSal" min="1900-01-01" max="2023-12-31">
+                    </div>
+                </fieldset>
+                </br>
+                <fieldset>
+                    <legend><strong>Correo electrónico & valoración</strong></legend>
+                    <div>
+                        <label for="email">E-mail</label></br>
+                        <input type="email" name="email" id="email" placeholder="Introduzca su correo electrónico" required size="49" maxlength="320">
+                    </div>
+                    </br>
+                    <div class="valoracion">
+                        <label for="valor">Valore su experiencia</label></br>
+                        <input type="checkbox" name="nice" id="nice">
+                        <label for="nice">Nice :D</label><br>
+                        <input type="checkbox" name="bueno" id="bueno">
+                        <label for="bueno">Not bad :P</label><br>
+                        <input type="checkbox" name="meh" id="meh">
+                        <label for="meh">Meh :V</label><br>
+                        <input type="checkbox" name="mal" id="mal">
+                        <label for="mal">No sé :,| </label><br>
+                        <input type="checkbox" name="puaj" id="puaj">
+                        <label for="puaj">Mierdón morrocotudo >:V</label><br>
+                    </div>
+                </fieldset>
+                <input class="reservar" type="submit" id="reservar" name="reservar" value="RESERVAR">
+            </form>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .envoltorio{
+            width: 80%;
+            margin: 0 auto;     /*para centrarlo*/
+        }
+        header{
+            background-color: aquamarine;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a{
+            margin: 2px 10px;
+
+            color: white;           /*para quitar el azul y subrayado a enlaces*/
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+        }
+        .container .left {                      /*YO HE HECHO LA SELECCIÓN DISTINTA, CHEQUEAR ESTO*/
+            background-color: aquamarine;
+            color: white;
+            width: 20%;
+            padding: 20px;
+        }
+        main{
+            margin: 25px;
+            width: 60%;
+        }
+        .container .right {
+            background-color: aquamarine;
+            color: white;
+            width: 20%;
+            justify-content: center;
+            padding: 20px;
+
+
+            display: flex;                          /*CHEQUEAR ESTO, hay que poner otra vez flex porque .container lo tiene pero solo sirve para manejar a los hijos, a los hijos no se le aplica display: flex;*/
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container .right .foto {
+            background-color: white;
+            color: black;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .container .right .publicidad {
+            background-color: white;
+            border-radius: 20px;
+            color: darkmagenta;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+        footer{
+            background-color: coral;
+            color: white;
+            /*justify-content: center; NO PORQUE NO ES CAJA FLEX, ENTONCES ES TEXT ALIGN*/
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="envoltorio">
+    <header>
+    <h1>Mi primer layout</h1>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Quiénes somos</a>
+    <a href="#">Qué hacemos</a>
+    <a href="#">Dónde estamos</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <aside class="left">
+      <h3>Últimas noticias</h3>
+      <p>Noticia 1</p>
+      <p>Noticia 2</p>
+      <p>Noticia 3</p>
+    </aside>
+
+    <main>
+      <h2>Artículo 1</h2>
+      <p>Lorem ipsum dolor sit amet...</p>
+
+      <h2>Artículo 2</h2>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </main>
+
+    <aside class="right">
+      <h3>Galería</h3>
+      <div class="foto">hola</div>
+      <div class="foto">adiós</div>
+
+      <div class="publicidad">Publicidad</div>
+    </aside>
+  </div>
+
+  <footer>
+    © 1DAM
+  </footer>
+  </div>
+</body>
+</html>

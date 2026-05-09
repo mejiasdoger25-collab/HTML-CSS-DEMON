@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 85%;
+            margin: 0%;
+            background-color: ivory;
+        }
+
+        header h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding-left: 0%;
+            /*para que no se desplace hacia la izq*/
+
+            display: flex;
+            /*para ponerlo horizontal*/
+            /*cuando pones las cajas flexibles, el ancho de las cajas es el ancho de lo que tiene dentro*/
+            justify-content: space-around;
+            /*para el espacio*/
+
+
+
+            margin-bottom: 0%;/*para que salgan juntos*/
+
+        }
+
+        nav ul a {
+
+            text-decoration: none;
+
+            /*cuando pones las cajas flexibles, el ancho de las cajas es el ancho de lo que tiene dentro*/
+            background-color: red;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            flex: 1 1 20%;
+            /*para estirar*/
+            /*si sobra que se repartan igual, si se pasa, que se enconjan por igual, para repartir dimensiones*/
+
+            text-align: center;
+            /*para alinear*/
+            /*margin-left: 1px; margin o border para alineación, con border se puede conseguir más ez*/
+            border-left: solid ivory 1px;
+        }
+
+        nav ul li a {
+            /*para cambiar la apariencia a los enlaces del menú*/
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul a:hover {
+            /*para que se ponga de otro color al pasar por encima el ratón*/
+            background-color: pink;
+            color: red;
+        }
+
+        main{
+            background-color: pink;
+            text-align: justify;
+        }
+
+        main p:first-child{
+            margin-top: 0%;
+            
+        }
+
+        nav ul a:first-child{
+            border-left: 0;
+        }
+    </style>    /*cambiar li por a, y los enlaces ponerlos dentro porque ya no hay que distinguirlo*/
+</head>
+
+<body>
+    <header>
+        <p>hola</p>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="#"><li>primero</li></a>           
+            <a href="#"><li>segundo</li></a>
+            <a href="#"><li>terero</li></a>
+            <a href="#"><li>primero</li></a>
+            <a href="#"><li>primero</li></a>
+        </ul>
+    </nav>
+    
+    <main>
+
+    </main>
+</body>
+
+</html>
